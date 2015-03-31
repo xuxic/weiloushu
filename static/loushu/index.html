@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+	<!-- Mirrored from h5.trando.com.cn/zhongxinshu/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Mar 2015 02:52:52 GMT -->
+	<!-- Added by HTTrack -->
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<!-- /Added by HTTrack -->
+	<head>
+		<meta charset="UTF-8">
+		<title>中央世家</title>
+		<link rel="stylesheet" type="text/css" href="Tpl/Public/css/main.css"/>
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	</head>
+	<body class="app">
+		<!--页面加载-->
+		<div id="load" class="source">
+			<div class="loader">
+				Loading...
+			</div>
+		</div>
+		<audio id="bgSound" src="Tpl/Public/images/bgSound.mp3" autoplay="autoplay" loop> </audio>
+		<header class="bgSoundImg musicPlay" id="bgSoundImg"> </header>
+		<section class="app-content" id="icontoucharea">
+			<section class="page page-move">
+				<div class="page0"> </div>
+				<div class="page00"> </div>
+				<div class="intro">
+					<img src="Tpl/Public/images/page1_txt.png"  alt="page 1 text">
+					<div class="clickImg"> </div>
+				</div>
+				<div id="page1txt2" class="scaleBig txt1"> </div>
+			</section>
+			<!--
+			<section class="page page-move">
+				<div class="page2">
+					<div class="scaleBig txt2"></div>
+				</div>
+			</section>
+			-->
+			<section class="page page-move">
+				<div class="page3">
+					<div class="scaleBig txt3"> </div>
+				</div>
+			</section>
+			<section class="page page-move">
+				<div class="page4">
+					<div class="scaleBig txt4"> </div>
+				</div>
+			</section>
+			<section class="page page-move">
+				<div class="page5">
+					<div class="scaleBig txt5"> </div>
+				</div>
+			</section>
+			<section class="page page-move">
+				<div class="page6">
+					<div class="scaleBig txt6"> </div>
+				</div>
+			</section>
+			<section class="page page-move">
+				<div class="page7">
+					<div class="scaleBig txt7"> </div>
+				</div>
+			</section>
+			<section class="page page-move">
+				<div class="page8">
+					<div class="scaleBig txt8"> </div>
+				</div>
+			</section>
+		</section>
+		<footer class="guideTop z-move"> </footer>
+		<script type="text/javascript" src="Tpl/Public/js/setviewport.js"></script>
+		<script type="text/javascript" src="Tpl/Public/js/zepto.min.js"></script>
+		<script type="text/javascript" src="Tpl/Public/js/TweenMax.min.js"></script>
+		<script type="text/javascript" src="Tpl/Public/js/hammer.min.js"></script>
+		<script type="text/javascript" src="Tpl/Public/js/preloadjs-NEXT.min.js"></script>
+		<script type="text/javascript" src="Tpl/Public/js/main.js"></script>
+		<script src="Tpl/Public/js/jweixin-1.0.0.js"></script>
+		<script>
+			// JavaScript Document
+			var wxData = {
+				"imgUrl" : "http://182.92.169.195:8080/static/loushu/Tpl/Public/images/clickImg.png",
+				"link" : "http://182.92.169.195:8080/static/loushu/",
+				"title" : "金地-中央世家",
+				"desc" : "Central Chateau"
+			};
+
+			function shareFn() {
+				wx.config({
+					appId : 'wx328e75be0c7b999f',
+					timestamp : 1427770370,
+					nonceStr : 'Ir2o7pL5rN1Q90Z1',
+					signature : 'a634ba5327dcb263cbfafc0a8e5e0d95934e3576',
+					jsApiList : [
+					// 所有要调用的 API 都要加到这个列表中
+					'checkJsApi', 'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'hideMenuItems', 'showMenuItems', 'hideAllNonBaseMenuItem', 'showAllNonBaseMenuItem', 'translateVoice', 'startRecord', 'stopRecord', 'onRecordEnd', 'playVoice', 'pauseVoice', 'openCard']
+				});
+				wx.ready(function() {
+					wx.hideAllNonBaseMenuItem({
+						success : function() {
+							//alert('已隐藏所有非基本菜单项');
+						}
+					});
+					wx.showMenuItems({
+						menuList : ['menuItem:favorite', 'menuItem:share:appMessage', 'menuItem:share:timeline' // 分享到朋友圈
+						],
+						success : function(res) {
+							//alert('已显示“阅读模式”，“分享到朋友圈”，“复制链接”等按钮');
+						},
+						fail : function(res) {
+							//alert(JSON.stringify(res));
+						}
+					});
+
+					wx.onMenuShareAppMessage({
+						title : wxData['title'], // 分享标题
+						desc : wxData['desc'], // 分享描述
+						link : wxData['link'], // 分享链接
+						imgUrl : wxData['imgUrl'], // 分享图标
+						type : 'link', // 分享类型,music、video或link，不填默认为link
+						dataUrl : '', // 如果type是music或video，则要提供数据链接，默认为空
+						success : function() {
+							// 用户确认分享后执行的回调函数
+							window.location.href = "";
+						},
+						cancel : function() {
+							// 用户取消分享后执行的回调函数
+						}
+					});
+
+					wx.onMenuShareTimeline({
+						title : wxData['desc'],
+						link : wxData['link'],
+						imgUrl : wxData['imgUrl'],
+						success : function(res) {
+							window.location.href = "";
+						},
+						cancel : function(res) {
+						}
+					});
+
+				});
+			}
+
+			shareFn();
+
+		</script>
+	</body>
+	<!-- Mirrored from h5.trando.com.cn/zhongxinshu/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Mar 2015 02:52:57 GMT -->
+</html>
