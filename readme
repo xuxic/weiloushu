@@ -1,0 +1,10 @@
+sudo apt-get update
+sudo apt-get install lighttpd
+sudo apt-get install python-webpy
+
+# my lighttpd.conf not work, need to leverage original lighttpd configuration
+
+sudo ln -s /vagrant/static /var/www/static
+
+# http://localhost/static/loushu
+
