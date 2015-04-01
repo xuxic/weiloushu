@@ -25,13 +25,14 @@ $(function(){
     	{src:"./Tpl/Public/images/page6_bg.jpg"},
 		{src:"./Tpl/Public/images/page7_bg.jpg"},
 		{src:"./Tpl/Public/images/page8_bg.jpg"},
+		{src:"./Tpl/Public/images/page1_txt.png"},
 		{src:"./Tpl/Public/images/txt2.png"},
 		{src:"./Tpl/Public/images/txt3.png"},
 		{src:"./Tpl/Public/images/txt4.png"},
 		{src:"./Tpl/Public/images/txt5.png"},
 		{src:"./Tpl/Public/images/txt6.png"},
 		{src:"./Tpl/Public/images/txt7.png"},
-		{src:"./Tpl/Public/images/txt8.png"}
+		{src:"./Tpl/Public/images/txt8.png"},
     ]
 
     loader = new createjs.LoadQueue(false);
