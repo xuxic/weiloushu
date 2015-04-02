@@ -92,7 +92,7 @@ $(function(){
 	*/
 	var isGray = false;
 	$(".clickImg").on("touchstart",function (){
-		TweenMax.to($(".page00"),4,{alpha:0,onComplete:function (){
+		TweenMax.to($(".page00"),2,{alpha:0,onComplete:function (){
 			isGray = true;
 			$(".intro").hide();
 			allowMove = true;	
